@@ -8,7 +8,7 @@
         <v-container
         fluid
         >
-            <v-row style="height: 100px"></v-row>
+            <v-row style="height: 80px"></v-row>
             <v-row justify="center">
                 <v-avatar
                     rounded="1"
@@ -34,6 +34,11 @@
                 </v-col>
                 <v-col cols="3"></v-col>
             </v-row>
+            <v-row>
+                <v-btn class="CV-btn" rounded="xl" height="80" variant="flat" href="/src/assets/CV_FR_2024_Alternance.pdf">
+                    <v-icon size="50">mdi-download</v-icon> Télécharger mon CV
+                </v-btn>
+            </v-row>
         </v-container>
         
     
@@ -47,10 +52,20 @@
         font-size: 50px;
         font-family: BerlinX-Bold;
     }
+    
     p{
         font-size: 30px;
         text-align: center;
         font-family: Berlin-Bold;
 
+    }
+
+    .CV-btn{
+        background-color:var(--PepoRed2);
+        color:var(--PepoWhite);
+        margin:0 auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top:20px;
     }
 </style>

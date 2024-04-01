@@ -1,7 +1,7 @@
 <template>
     <v-container style="height: 100px;">
         <v-row>
-            <v-col>
+            <v-col cols="10">
                 <h1>MARIE PEPO</h1>
             </v-col>
             <v-col>
@@ -9,7 +9,7 @@
                     size="70"
                     class="OrangeButton"
                 >
-                    mdi-account-circle
+                    mdi-circle
                 </v-icon>
                 <v-icon 
                     size="70"
@@ -21,7 +21,7 @@
                     size="70"
                     class="OrangeButton"
                 >
-                    mdi-account-circle
+                    mdi-circle
                 </v-icon>
             </v-col>
         </v-row>

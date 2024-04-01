@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container style="padding-bottom: 300px;">
         <v-responsive>
             <v-row>
                 <SectionTitle title="Competences"/>
@@ -11,7 +11,7 @@
                 <SectionTitle title="Projets"/>
             </v-row>
             <v-row>
-                <ProjetMain />
+                <Projets />
             </v-row>
             <v-row>
                 <SectionTitle title="Experiences"/>
@@ -33,10 +33,14 @@
                 <SectionTitle title="Contact"/>
             </v-row>
             <v-row>
-                <div style="margin:0 auto; font-size:20px; font-weight: 1000;">
-                    Bientôt
-                </div>
+                <Contacts />
             </v-row>
         </v-responsive>
     </v-container>
 </template>
+
+
+<script setup lang="ts">
+  import Contacts from '@/components/Sections/Contacts/Main.vue'
+  import Projets from '@/components/Sections/Projets/Main.vue'
+</script>
