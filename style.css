@@ -1,0 +1,35 @@
+@font-face {
+    font-family: Broadway;
+    src: url("@/assets/fonts/Broadway-Regular.ttf");
+}
+
+:root {
+    --PepoWhite: #fefaf0;
+    --PepoGreen1: #04d9b2;
+    --PepoGreen2: #03a688;
+    --PepoGreen3: #014029;
+    --PepoYellow1: #fdbe76;
+    --PepoYellow2: #d6894a;
+    --PepoRed1: #f2916d;
+    --PepoRed2: #d93f07;
+  }
+  
+
+*{
+    
+    font-family: serif;
+    
+}
+
+body{
+    background-color: var(--PepoWhite);
+}
+
+p, h1, h2{
+    color: var(--PepoGreen3);
+}
+
+
+
+
+
