@@ -2,7 +2,7 @@
     <div class="text-center">
         <v-tooltip
           location="top center"
-          :origin="origin"
+          origin="auto"
           no-click-animation
         >
             <template v-slot:activator="{ props }">
