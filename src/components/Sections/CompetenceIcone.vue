@@ -8,7 +8,7 @@
             <template v-slot:activator="{ props }">
                 <v-btn v-bind="props" class="Icone" size="80" rounded="circle">
                     <v-avatar size="80">
-                        <v-img :src='"/src/assets/Icones/Icone_" + pathName + ".png"' />
+                        <v-img :src='generateUrlImg(pathName)' />
                     </v-avatar>
                 </v-btn>
             </template>
@@ -25,6 +25,9 @@
     //Variables
     defineProps(['pathName', 'hoverName'])
     // 
+    const generateUrlImg = function(img: string) {
+        return new URL(`/src/assets/Icones/Icone_${img}.png`, import.meta.url).href
+    }
     
     
 </script>

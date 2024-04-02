@@ -6,7 +6,7 @@
     <div class="item">
     
         <img 
-            :src='"/src/assets/Projets/Cover_"  + imageName + ".png"'
+            :src='generateUrlImg(imageName)'
             
         />
         
@@ -29,7 +29,9 @@
     //Variables
     defineProps(['title', 'description', 'imageName'])
     // 
-    
+    const generateUrlImg = function(img: string) {
+        return new URL(`/src/assets/Projets/Cover_${img}.png`, import.meta.url).href
+    }
     
 </script>
 
