@@ -35,7 +35,7 @@
                 <v-col cols="3"></v-col>
             </v-row>
             <v-row>
-                <v-btn class="CV-btn" rounded="xl" height="80" variant="flat" href="/src/assets/CV_FR_2024_Alternance.pdf">
+                <v-btn class="CV-btn" rounded="xl" height="80" variant="flat" :href='generateUrlCV()'>
                     <v-icon size="50">mdi-download</v-icon> Télécharger mon CV
                 </v-btn>
             </v-row>
@@ -45,6 +45,13 @@
     
     </v-img>
 </template>
+
+<script lang="ts" setup>
+    
+    const generateUrlCV = function() {
+        return new URL(`/src/assets/CV_FR_2024_Alternance.pdf`, import.meta.url).href
+    }
+</script>
 
 
 <style scoped>
