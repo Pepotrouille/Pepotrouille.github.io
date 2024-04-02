@@ -7,6 +7,7 @@ import ViteFonts from 'unplugin-fonts/vite'
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
+import { join, parse, resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -45,4 +46,24 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  build: {
+    outDir: './dist',
+    rollupOptions: {
+      input: entryPoints(
+        "index.html",
+      ),
+    },
+  }
 })
+
+function entryPoints(...paths) {
+  const entries = paths.map(parse).map(entry => {
+    const { dir, base, name, ext } = entry;
+    const key = join(dir, name);
+    const path = resolve(__dirname, dir, base);
+    return [key, path];
+  });
+  
+  const config = Object.fromEntries(entries);
+  return config;
+}
