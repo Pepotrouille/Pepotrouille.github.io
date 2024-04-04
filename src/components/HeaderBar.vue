@@ -5,6 +5,7 @@
                 <h1>MARIE PEPO</h1>
             </v-col>
             <v-col>
+                <!--
                 <v-icon 
                     size="70"
                     class="OrangeButton"
@@ -23,6 +24,7 @@
                 >
                     mdi-circle
                 </v-icon>
+                -->
             </v-col>
         </v-row>
     </v-container>
